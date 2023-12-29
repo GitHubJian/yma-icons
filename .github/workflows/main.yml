@@ -31,11 +31,11 @@ jobs:
             - name: commit push
               # 执行执行某个 shell 命令或脚本
               run: |
-                  git config --global user.name auto
-                  git config --global user.email auto@qq.com
+                  git config --global user.name xiaowensheng
+                  git config --global user.email 958753831@qq.com
                   git add .
                   git commit -m "build" -a
                   git push
               # 环境变量
               env:
-                  email: auto@qq.com
+                  email: 958753831@qq.com
