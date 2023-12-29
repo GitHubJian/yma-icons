@@ -1,0 +1,13 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g fill="black">
+        <rect x="73" y="98" width="94" height="12" rx="6" />
+        <rect x="73" y="128" width="94" height="12" rx="6" />
+        <rect x="73" y="158" width="53" height="12" rx="6" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M47 81C47 64.4315 60.4315 51 77 51H163C179.569 51 193 64.4315 193 81V224H77C60.4315 224 47 210.569 47 194V81ZM77 63C67.0589 63 59 71.0589 59 81V194C59 203.941 67.0589 212 77 212H181V81C181 71.0589 172.941 63 163 63H77Z"
+        />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M190 89C199.941 89 208 97.0589 208 107V194C208 203.941 199.941 212 190 212H184.25V224H190C206.569 224 220 210.569 220 194V107C220 90.4315 206.569 77 190 77H184.25V89H190Z"
+        />
+    </g>
+</svg>
