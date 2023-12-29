@@ -21,21 +21,22 @@ jobs:
               uses: actions/setup-node@v1
               # 指定某个 action 可能需要输入的参数
               with:
-                  node-version: '14'
+                  node-version: '14.17.1'
             - name: npm install and build
               # 执行执行某个 shell 命令或脚本
               run: |
+                  npm -v
                   npm install
                   npm run build:icon
                   npm run build
             - name: commit push
               # 执行执行某个 shell 命令或脚本
               run: |
-                  git config --global user.name xiaowensheng
-                  git config --global user.email 958753831@qq.com
+                  git config --global user.name actions
+                  git config --global user.email actions@qq.com
                   git add .
                   git commit -m "build" -a
                   git push
               # 环境变量
               env:
-                  email: 958753831@qq.com
+                  email: actions@qq.com
