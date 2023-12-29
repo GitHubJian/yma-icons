@@ -1,4 +1,4 @@
-name: yma-icons
+name: build
 # 触发 workflow 的事件
 on:
     push:
@@ -43,15 +43,19 @@ jobs:
               # 环境变量
               env:
                   email: actions@qq.com
-    publish-npm:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
+
+            - name: checkout_actions
+              uses: actions/checkout@v3
+
+            - name: setup-node
+              uses: actions/setup-node@v3
               with:
                   node-version: 16
                   registry-url: https://registry.npmjs.org/
-            - run: npm ci
+
+            - name: npm ci
+              run: |
+                  npm ci
 
             - name: git config
               run: |
