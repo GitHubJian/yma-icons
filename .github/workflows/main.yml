@@ -31,6 +31,7 @@ jobs:
                   npm install
                   npm run build:icon
                   npm run build
+                  npm run lint
             - name: commit push
               # 执行执行某个 shell 命令或脚本
               run: |
