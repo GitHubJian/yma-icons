@@ -1,5 +1,5 @@
 module.exports = {
     outputDir: 'docs',
-    publicPath: '/yma-icons/doc/',
+    publicPath: '/yma-icons/',
     presets: ['yma-config-preset'],
 };
