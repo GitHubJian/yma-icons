@@ -9,7 +9,7 @@
 <script>
 import XRow from './row.vue';
 import XCol from './col.vue';
-import PeopleDouble from '@/component/people-double';
+import PeopleDouble from '../../../lib/people-double';
 
 export default {
     name: 'App',

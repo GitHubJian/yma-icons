@@ -1,4 +1,4 @@
-import '@/component/index.css';
+import '../../../index.css';
 
 import Vue from 'vue';
 import App from './app.vue';

@@ -3,9 +3,11 @@ const cheerio = require('cheerio');
 const path = require('path');
 const ejs = require('ejs');
 const glob = require('glob');
+const {covert} = require('./util');
+const writeIndexJs = require('./writeIndexJs');
 
 const SVG_PATH = path.resolve(__dirname, '../src/asset');
-const TARGET_PATH = path.resolve(__dirname, '../src/component');
+const TARGET_PATH = path.resolve(__dirname, '../lib');
 const APP_FILE_PATH = path.resolve(__dirname, '../src/page/index/app.vue');
 
 const mainVueTemplate = fse.readFileSync(
@@ -18,20 +20,6 @@ const mainVueTemplate = fse.readFileSync(
 const files = glob.sync('**.svg', {
     cwd: SVG_PATH,
 });
-
-function covert(filename) {
-    const filenamePairs = filename.split('-');
-
-    const str = filenamePairs.reduce(function (prev, cur) {
-        cur = cur.slice(0, 1).toUpperCase() + cur.slice(1);
-
-        prev = prev + cur;
-
-        return prev;
-    }, '');
-
-    return str;
-}
 
 files.forEach(function (filename) {
     const fileBasename = path.basename(filename, '.svg');
@@ -113,7 +101,7 @@ const componentsTemplate = fileBasenames.map(function (filename) {
 const importStatements = fileBasenames.map(function (filename) {
     const componentName = covert(filename);
 
-    return `import ${componentName} from '@/component/${filename}';`;
+    return `import ${componentName} from '../../../lib/${filename}';`;
 });
 
 const componentKeys = fileBasenames.map(function (filename) {
@@ -145,3 +133,5 @@ export default {
 `;
 
 fse.writeFileSync(APP_FILE_PATH, appVueContent, {encoding: 'utf-8'});
+
+writeIndexJs(fileBasenames);
