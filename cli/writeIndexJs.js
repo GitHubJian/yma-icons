@@ -37,5 +37,5 @@ export default {
 };
 `;
 
-    fse.writeFileSync(TARGE_FILE_PATH, indexJSContent, {encoding: 'utf-8'});
+    fse.outputFileSync(TARGE_FILE_PATH, indexJSContent, {encoding: 'utf-8'});
 };
