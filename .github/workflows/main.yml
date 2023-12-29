@@ -25,6 +25,8 @@ jobs:
             - name: npm install and build
               # 执行执行某个 shell 命令或脚本
               run: |
+                  node -v
+                  npm install -g npm@9.1.1
                   npm -v
                   npm install
                   npm run build:icon
