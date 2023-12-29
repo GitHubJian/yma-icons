@@ -1,0 +1,26 @@
+{
+    "name": "yma-icons",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "yma dev",
+        "build": "yma build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GitHubJian/yma-icons.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/GitHubJian/yma-icons/issues"
+    },
+    "homepage": "https://github.com/GitHubJian/yma-icons#readme",
+    "dependencies": {
+        "vue": "2.6.11",
+        "vue-template-compiler": "2.6.11",
+        "yma-cli": "1.0.12"
+    }
+}
