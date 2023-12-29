@@ -60,6 +60,8 @@ jobs:
 
             - name: npm version
               run: |
+                  echo '//registry.npmjs.org/:_authToken=${{ secrets.npm_token  }}' > ${{ github.workspace }}/.npmrc
+                  cat $NPM_CONFIG_USERCONFIG
                   npm version patch
 
             - name: npm publish
