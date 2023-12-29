@@ -1,0 +1,12 @@
+.x-icon {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    font-size: inherit;
+    fill: currentColor;
+}
+
+.x-icon svg {
+    vertical-align: middle;
+}

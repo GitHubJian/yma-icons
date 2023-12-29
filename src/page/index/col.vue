@@ -69,21 +69,21 @@ export default {
 
 @for $i from 0 through 24 {
     .x-col-#{$i} {
-        width: (1 / 24 * $i * 100) * 1%;
+        width: (calc(1 / 24) * $i * 100) * 1%;
     }
 
     .x-col-offset-#{$i} {
-        margin-left: (1 / 24 * $i * 100) * 1%;
+        margin-left: (calc(1 / 24) * $i * 100) * 1%;
     }
 
     .x-col-pull-#{$i} {
         position: relative;
-        right: (1 / 24 * $i * 100) * 1%;
+        right: (calc(1 / 24) * $i * 100) * 1%;
     }
 
     .x-col-push-#{$i} {
         position: relative;
-        left: (1 / 24 * $i * 100) * 1%;
+        left: (calc(1 / 24) * $i * 100) * 1%;
     }
 }
 </style>

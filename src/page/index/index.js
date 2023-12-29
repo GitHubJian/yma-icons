@@ -1,9 +1,7 @@
-import '@/component/plugin';
-import XIcon from '@/component';
+import '@/component/index.css';
+
 import Vue from 'vue';
 import App from './app.vue';
-
-Vue.use(XIcon);
 
 new Vue({
     render: h => h(App),

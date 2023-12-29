@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "yma dev",
+        "build:icon": "node ./cli",
         "build": "yma build"
     },
     "repository": {
@@ -19,6 +20,10 @@
     },
     "homepage": "https://github.com/GitHubJian/yma-icons#readme",
     "dependencies": {
+        "cheerio": "1.0.0-rc.12",
+        "ejs": "3.1.9",
+        "fs-extra": "11.2.0",
+        "glob": "10.3.10",
         "vue": "2.6.11",
         "vue-template-compiler": "2.6.11",
         "yma-cli": "1.0.12"
