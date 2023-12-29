@@ -20,12 +20,13 @@
                 default: 16,
             },
             group0: {
-                     type: String,
-                     default: 'black'
-                 },group1: {
-                     type: String,
-                     default: 'red'
-                 }
+    type: String,
+    default: 'black'
+},
+group1: {
+    type: String,
+    default: 'red'
+},
         },
     };
 </script>
