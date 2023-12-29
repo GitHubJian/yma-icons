@@ -1,7 +1,7 @@
 <template>
     <x-row>
         <x-col :span="4">
-            <people-double/>
+            <people-double />
         </x-col>
     </x-row>
 </template>
