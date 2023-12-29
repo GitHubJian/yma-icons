@@ -53,6 +53,8 @@ jobs:
             - run: npm ci
             - name: npm publish
               run: |
+                  git config --global user.email "958753831@qq.com"
+                  git config --global user.name "xiaowensheng"
                   npm version patch
                   npm publish
               env:

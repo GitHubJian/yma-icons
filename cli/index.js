@@ -10,12 +10,9 @@ const SVG_PATH = path.resolve(__dirname, '../src/asset');
 const TARGET_PATH = path.resolve(__dirname, '../lib');
 const APP_FILE_PATH = path.resolve(__dirname, '../src/page/index/app.vue');
 
-const mainVueTemplate = fse.readFileSync(
-    path.resolve(__dirname, './template.vue.ejs'),
-    {
-        encoding: 'utf-8',
-    }
-);
+const mainVueTemplate = fse.readFileSync(path.resolve(__dirname, './template.vue.ejs'), {
+    encoding: 'utf-8',
+});
 
 const files = glob.sync('**.svg', {
     cwd: SVG_PATH,
@@ -59,16 +56,12 @@ files.forEach(function (filename) {
                     .join(','),
             },
         },
-        {}
+        {},
     );
 
-    fse.writeFileSync(
-        path.resolve(TARGET_PATH, fileBasename, 'main.vue'),
-        template,
-        {
-            encoding: 'utf-8',
-        }
-    );
+    fse.writeFileSync(path.resolve(TARGET_PATH, fileBasename, 'main.vue'), template, {
+        encoding: 'utf-8',
+    });
 
     const indexJSContent = `import Main from './main.vue';
 
@@ -78,13 +71,9 @@ Main.install = function (Vue) {
 
 export default Main;`;
 
-    fse.writeFileSync(
-        path.resolve(TARGET_PATH, fileBasename, 'index.js'),
-        indexJSContent,
-        {
-            encoding: 'utf-8',
-        }
-    );
+    fse.writeFileSync(path.resolve(TARGET_PATH, fileBasename, 'index.js'), indexJSContent, {
+        encoding: 'utf-8',
+    });
 });
 
 const fileBasenames = files.map(function (filename) {
