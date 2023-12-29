@@ -22,9 +22,12 @@ jobs:
               # 指定某个 action 可能需要输入的参数
               with:
                   node-version: '14.17.1'
+                  registry-url: https://registry.npmjs.org/
             - name: npm install and build
               # 执行执行某个 shell 命令或脚本
               run: |
+                  git config --global user.name actions
+                  git config --global user.email actions@qq.com
                   node -v
                   npm install -g npm@9.1.1
                   npm -v
@@ -32,35 +35,6 @@ jobs:
                   npm run build:icon
                   npm run build
                   npm run lint
-            - name: commit push
-              # 执行执行某个 shell 命令或脚本
-              run: |
-                  git config --global user.name actions
-                  git config --global user.email actions@qq.com
-                  git add .
-                  git commit -m "build" -a
-                  git push
-              # 环境变量
-              env:
-                  email: actions@qq.com
-
-            - name: checkout_actions
-              uses: actions/checkout@v3
-
-            - name: setup-node
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 16
-                  registry-url: https://registry.npmjs.org/
-
-            - name: npm ci
-              run: |
-                  npm ci
-
-            - name: git config
-              run: |
-                  git config --global user.email "958753831@qq.com"
-                  git config --global user.name "xiaowensheng"
 
             - name: npm version
               run: |
@@ -69,6 +43,15 @@ jobs:
                   NPM_CONFIG_USERCONFIG: ${{ github.workspace }}
                   NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
+            - name: commit push
+              # 执行执行某个 shell 命令或脚本
+              run: |
+                  if [[ -n $(git diff --stat)  ]]
+                  then
+                    git add .
+                    git commit -m "build" -a
+                    git push
+                  fi
             - name: npm publish
               run: |
                   npm publish
