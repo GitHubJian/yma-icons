@@ -28,6 +28,7 @@ jobs:
               run: |
                   git config --global user.name actions
                   git config --global user.email actions@qq.com
+                  git pull
                   node -v
                   npm install -g npm@9.1.1
                   npm -v
