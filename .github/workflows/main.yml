@@ -36,6 +36,7 @@ jobs:
               run: |
                   git config --global user.name actions
                   git config --global user.email actions@qq.com
+                  npm version patch
                   git add .
                   git commit -m "build" -a
                   git push
