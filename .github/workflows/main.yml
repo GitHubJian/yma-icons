@@ -36,13 +36,6 @@ jobs:
                   npm run build
                   npm run lint
 
-            - name: npm version
-              run: |
-                  npm version patch
-              env:
-                  NPM_CONFIG_USERCONFIG: ${{ github.workspace }}
-                  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-
             - name: commit push
               # 执行执行某个 shell 命令或脚本
               run: |
@@ -52,6 +45,14 @@ jobs:
                     git commit -m "build" -a
                     git push
                   fi
+
+            - name: npm version
+              run: |
+                  npm version patch
+              env:
+                  NPM_CONFIG_USERCONFIG: ${{ github.workspace }}
+                  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
             - name: npm publish
               run: |
                   npm publish
