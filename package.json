@@ -1,6 +1,6 @@
 {
     "name": "yma-icons",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "",
     "main": "index.js",
     "scripts": {
@@ -13,7 +13,11 @@
         "type": "git",
         "url": "git+https://github.com/GitHubJian/yma-icons.git"
     },
-    "files": ["lib", "index.js", "index.css"],
+    "files": [
+        "lib",
+        "index.js",
+        "index.css"
+    ],
     "keywords": [],
     "author": "",
     "license": "ISC",
