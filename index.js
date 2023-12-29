@@ -1,7 +1,9 @@
 import {default as PeopleDouble} from './lib/people-double';
+import {default as Index} from './lib/index';
 import {default as File} from './lib/file';
 
 const components = [PeopleDouble,
+Index,
 File,];
 
 const install = function (Vue) {
@@ -13,5 +15,6 @@ const install = function (Vue) {
 export default {
     install,
     PeopleDouble,
+Index,
 File,
 };

@@ -4,6 +4,9 @@
             <people-double />
         </x-col>
         <x-col :span="4">
+            <index />
+        </x-col>
+        <x-col :span="4">
             <file />
         </x-col>
     </x-row>
@@ -13,6 +16,7 @@
 import XRow from './row.vue';
 import XCol from './col.vue';
 import PeopleDouble from '../../../lib/people-double';
+import Index from '../../../lib/index';
 import File from '../../../lib/file';
 
 export default {
@@ -21,6 +25,7 @@ export default {
         XRow,
         XCol,
         PeopleDouble,
+        Index,
         File,
     },
 };
