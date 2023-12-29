@@ -48,7 +48,8 @@ jobs:
 
             - name: npm version
               run: |
-                  npm version patch --verbose
+                  npm version patch
+                  git push
               env:
                   NPM_CONFIG_USERCONFIG: ${{ github.workspace }}
                   NODE_AUTH_TOKEN: ${{secrets.npm_token}}
