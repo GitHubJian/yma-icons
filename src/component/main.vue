@@ -6,7 +6,7 @@
         }"
     >
         <svg class="x-icon__inner">
-            <use :xlink:href="href" />
+            <use :xlink:href="href"/>
         </svg>
     </span>
 </template>

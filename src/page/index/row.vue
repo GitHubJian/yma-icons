@@ -51,18 +51,9 @@ export default {
 @import './mixin.scss';
 
 @include b(row) {
-    position: relative;
-    box-sizing: border-box;
-
     @include clearfix;
 
     @include m(flex) {
-        display: flex;
-        &:before,
-        &:after {
-            display: none;
-        }
-
         @include when(justify-center) {
             justify-content: center;
         }
@@ -90,6 +81,16 @@ export default {
         @include when(align-bottom) {
             align-items: flex-end;
         }
+
+        display: flex;
+
+        &::before,
+        &::after {
+            display: none;
+        }
     }
+
+    position: relative;
+    box-sizing: border-box;
 }
 </style>

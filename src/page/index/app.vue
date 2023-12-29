@@ -1,7 +1,7 @@
 <template>
     <x-row>
         <x-col>
-            <x-icon name="people-double"></x-icon>
+            <x-icon name="people-double"/>
         </x-col>
     </x-row>
 </template>

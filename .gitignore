@@ -74,6 +74,6 @@ Thumbs.db
 output
 # dist
 dll
-static
+# static
 .serve
 .cache
