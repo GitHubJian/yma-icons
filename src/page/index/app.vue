@@ -1,13 +1,16 @@
 <template>
     <x-row>
         <x-col :span="4">
-            <people-double />
+            <people-double/>
         </x-col>
         <x-col :span="4">
-            <index />
+            <invest/>
         </x-col>
         <x-col :span="4">
-            <file />
+            <index/>
+        </x-col>
+        <x-col :span="4">
+            <file/>
         </x-col>
     </x-row>
 </template>
@@ -16,6 +19,7 @@
 import XRow from './row.vue';
 import XCol from './col.vue';
 import PeopleDouble from '../../../lib/people-double';
+import Invest from '../../../lib/invest';
 import Index from '../../../lib/index';
 import File from '../../../lib/file';
 
@@ -25,6 +29,7 @@ export default {
         XRow,
         XCol,
         PeopleDouble,
+        Invest,
         Index,
         File,
     },

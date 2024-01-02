@@ -13,11 +13,7 @@
         "type": "git",
         "url": "git+https://github.com/GitHubJian/yma-icons.git"
     },
-    "files": [
-        "lib",
-        "index.js",
-        "index.css"
-    ],
+    "files": ["lib", "index.js", "index.css"],
     "keywords": [],
     "author": "",
     "license": "ISC",
