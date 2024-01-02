@@ -4,8 +4,6 @@
     "description": "图标合集",
     "main": "index.js",
     "scripts": {
-        "preinstall": "npm install -g yarn@1.22.19",
-        "install": "yarn",
         "dev": "yma dev",
         "build:icon": "node ./cli",
         "build": "yma build",

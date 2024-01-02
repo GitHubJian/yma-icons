@@ -31,8 +31,9 @@ jobs:
                   git pull
                   node -v
                   npm install -g npm@9.1.1
+                  npm install -g yarn@1.22.19
                   npm -v
-                  npm run install
+                  yarn
                   npm run build:icon
                   npm run build
                   npm run lint
