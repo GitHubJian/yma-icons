@@ -1,6 +1,6 @@
 {
     "name": "yma-icons",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "图标合集",
     "main": "index.js",
     "scripts": {
