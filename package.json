@@ -1,7 +1,7 @@
 {
     "name": "yma-icons",
     "version": "1.0.6",
-    "description": "",
+    "description": "图标合集",
     "main": "index.js",
     "scripts": {
         "dev": "yma dev",
@@ -31,7 +31,6 @@
         "glob": "10.3.10",
         "vue": "2.6.11",
         "vue-template-compiler": "2.6.11",
-        "yma-cli": "1.0.12",
-        "yma-cli-lint": "1.0.12"
+        "yma-cli": "^1.0.0"
     }
 }
